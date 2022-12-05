@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4._2.ProductoListPage"
+         Title="Inicio">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="addButton"  Text="Agregar" Clicked="addButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout>
+                <SearchBar Placeholder="Buscar producto" TextChanged="SearchBar_TextChanged"></SearchBar>
+                <ListView x:Name="listView" IsPullToRefreshEnabled="True" RowHeight="50" ItemSelected="listView_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell Height="50">
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Eliminar" IsDestructive="True" />
+                                </ViewCell.ContextActions>
+                                <Grid Padding ="5">
+                                    <Image Grid.Column="0" Grid.Row="0"  Source="{Binding ImagenSource}" WidthRequest="50" HeightRequest="50"> </Image>
+                                    <Label Grid.Column="1" Grid.Row="0"  Text="{Binding Id}"/>
+                                    <Label Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Producto1}"  />
+                                    <Label Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Precio}"  />
+                                    </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                </StackLayout>
+            </Grid>
+
+
+
+        
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

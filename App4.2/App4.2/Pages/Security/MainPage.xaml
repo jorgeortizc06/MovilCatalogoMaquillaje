@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="App4._2.MainPage" xmlns:pages="clr-namespace:App4._2;assembly=App4.2" MasterBehavior="Popover" Title="MENÚ PRINCIPAL">
+	 <MasterDetailPage.Master>
+        <pages:MasterPage x:Name="masterPage" />
+    </MasterDetailPage.Master>
+    
+    <MasterDetailPage.Detail>
+        <NavigationPage BarBackgroundColor="#003B80" BarTextColor="#FFFFFF">
+            <x:Arguments>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>

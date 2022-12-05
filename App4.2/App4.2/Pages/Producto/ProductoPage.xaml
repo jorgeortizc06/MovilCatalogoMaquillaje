@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4._2.ProductoPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="saveButton"  Text="Guardar" Clicked="saveButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <ScrollView>
+            <Grid Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="1" Grid.Column="0" >
+                    <Label Text="Producto"  FontAttributes="Bold"></Label>
+                    <Entry Text="{Binding Producto1}" HorizontalOptions="Fill"></Entry>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="0" >
+                    <Label Text="Precio"  FontAttributes="Bold"></Label>
+                    <Entry Text="{Binding Precio}" HorizontalOptions="Fill"></Entry>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" Grid.Column="0" >
+                    <Label Text="Marca"  FontAttributes="Bold"></Label>
+                    <Picker x:Name="marcaPicker"
+                           HeightRequest="43"
+                           HorizontalOptions="Fill"
+                           IsEnabled="True"
+                           ItemDisplayBinding="{Binding Description}"
+                        />
+                </StackLayout>
+
+                
+
+                <StackLayout Grid.Row="4" Grid.Column="0">
+                    <Button Text="Capturar" Clicked="Capturar_Clicked"></Button>
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" Grid.Column="0">
+                    <Label Text="Imagen"  FontAttributes="Bold"></Label>
+                    <Image x:Name="ImageData" Aspect="AspectFit" WidthRequest="256" HeightRequest="256"/>
+                </StackLayout>
+            </Grid>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

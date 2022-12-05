@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="App4._2.MasterPage"
+    Title="Billing"
+    BackgroundColor="#003B80"
+    Icon="hamburger.png"
+    Padding="0,22,0,0">
+	<ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <ListView x:Name="listView"
+                      BackgroundColor="#003B80"
+                      SeparatorColor="#003B80"
+                      SeparatorVisibility="Default"
+                      VerticalOptions="FillAndExpand">
+                <ListView.Header>
+                    <StackLayout BackgroundColor="#003B80">
+                        <Grid HorizontalOptions="FillAndExpand"
+                              Padding="8,5,8,5"
+                              VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25" />
+                                <RowDefinition Height="25" />
+                                <RowDefinition Height="25" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            
+                           <Frame CornerRadius="5" Margin="0,20,0,20" Padding="0" IsClippedToBounds="False" Grid.Row="0" Grid.RowSpan="3"> 
+                             <Image x:Name="userPicture" Grid.Row="0"
+                                   Grid.Column="0"
+                                   Aspect="AspectFit"
+                                   HeightRequest="50"
+                                   HorizontalOptions="Center"
+                                   
+                                   VerticalOptions="Center"
+                                    Source="logo.png"
+                                   WidthRequest="50" />
+                            </Frame> 
+       
+
+                            <Grid Grid.Row="0"
+                                  Grid.RowSpan="3"
+                                  Grid.Column="1"
+                                  HorizontalOptions="FillAndExpand"
+                                  Padding="10,0,10,0"
+                                  VerticalOptions="FillAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label x:Name="UserName"
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       TextColor="#E7EAEA"/>
+
+                                <Label x:Name="OrganizationName"
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       FontAttributes="Bold"
+                                       FontSize="15"
+                                       TextColor="#FFFFFF" />
+                            </Grid>
+                        </Grid>
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell DetailColor="White"
+                                   ImageSource="{Binding IconSource}"
+                                   Text="{Binding Title}"
+                                   TextColor="White" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4._2.RegisterPage"
+             Title="Registro">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="saveButton" IconImageSource="save.png" Clicked="saveButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Regístrate" FontSize="Title" FontAttributes="Bold" ></Label>
+
+                <Entry Grid.Row="2" Grid.Column="0" Placeholder="Nombres y Apellidos" ></Entry>
+                
+                <Entry Grid.Row="3" Grid.Column="0" Placeholder="RUC" ></Entry>
+
+                <Editor Grid.Row="4" Grid.Column="0" Placeholder="Dirección" ></Editor>
+
+                <DatePicker Grid.Row="5" Grid.Column="0" Format="dd/MM/yyyy"  HorizontalOptions="Fill" HeightRequest="43"/>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
