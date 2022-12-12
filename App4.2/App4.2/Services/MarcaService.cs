@@ -120,19 +120,14 @@ namespace App4_2.Services
 
         public async Task<bool> MarcaDeleteAsync(Marca model)
         {
-            Uri uri = new Uri(url + "api/Marcas/Delete");
+            Uri uri = new Uri(url + "api/Marcas/"+model.Id);
 
-            string json = JsonConvert.SerializeObject(model);
-
-            StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-
-            HttpResponseMessage response = await client.PostAsync(uri, httpContent);
+            HttpResponseMessage response = await client.DeleteAsync(uri);
 
             if (response.IsSuccessStatusCode)
             {
                 return true;
             }
-
             return false;
         }
 

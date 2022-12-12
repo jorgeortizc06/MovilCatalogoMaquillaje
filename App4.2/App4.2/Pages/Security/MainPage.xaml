@@ -6,7 +6,7 @@
     </MasterDetailPage.Master>
     
     <MasterDetailPage.Detail>
-        <NavigationPage BarBackgroundColor="#003B80" BarTextColor="#FFFFFF">
+        <NavigationPage BarBackgroundColor="#ff3399" BarTextColor="#FFFFFF">
             <x:Arguments>
             </x:Arguments>
         </NavigationPage>

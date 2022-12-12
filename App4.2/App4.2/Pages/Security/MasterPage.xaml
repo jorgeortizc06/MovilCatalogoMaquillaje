@@ -3,18 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="App4._2.MasterPage"
     Title="Billing"
-    BackgroundColor="#003B80"
+    BackgroundColor="#ff3399"
     Icon="hamburger.png"
     Padding="0,22,0,0">
 	<ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand">
             <ListView x:Name="listView"
-                      BackgroundColor="#003B80"
-                      SeparatorColor="#003B80"
+                      BackgroundColor="#ff3399"
+                      SeparatorColor="#ff3399"
                       SeparatorVisibility="Default"
                       VerticalOptions="FillAndExpand">
                 <ListView.Header>
-                    <StackLayout BackgroundColor="#003B80">
+                    <StackLayout BackgroundColor="#ff3399">
                         <Grid HorizontalOptions="FillAndExpand"
                               Padding="8,5,8,5"
                               VerticalOptions="FillAndExpand">

@@ -2,37 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App4._2.LoginPage"
-            Title="Inicio de Sesión" >
-
+             BackgroundImageSource="maquilaje1.png"
+             NavigationPage.HasNavigationBar="False"
+            Title="CATALOGOS MAQUILLAJE" >
+    
     <ScrollView>
         <Grid Padding="20">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="80"/>
                 <RowDefinition Height="200"/>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="60"/>
-                <RowDefinition Height="30"/> 
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="5"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
+            <Image Grid.Row="1" Grid.Column="0" Source="" WidthRequest="600" HeightRequest="600"></Image>
+            
+            <Button Grid.Row="2" Margin="30,0,30,0" Grid.Column="0" Text="Productos" BackgroundColor="#ff3399" TextColor="White" CornerRadius="10" Clicked="LoginButton_Clicked"></Button>
 
-            <Image Grid.Row="1" Grid.Column="0" Source="maquillaje.png" WidthRequest="200" HeightRequest="200"></Image>
 
-            <Entry Grid.Row="2" Margin="30,0,30,0" Grid.Column="0" Placeholder="Usuario" HorizontalTextAlignment="Center"></Entry>
-
-            <Entry Grid.Row="3" Margin="30,0,30,0" Grid.Column="0" Placeholder="Password" IsPassword="True" HorizontalTextAlignment="Center"></Entry>
-
-            <Button Grid.Row="5" Margin="30,0,30,0" Grid.Column="0" Text="Ingresar" BackgroundColor="#ff3399" TextColor="White" CornerRadius="10" Clicked="LoginButton_Clicked"></Button>
-
-            <Label Grid.Row="6" Grid.Column="0" Margin="0,30,0,0" Text="¿No tienes cuenta?" FontSize="Subtitle" FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
-
-            <Button Grid.Row="8" Margin="30,0,30,0" Grid.Column="0" Text="Registrate" BackgroundColor="#ff9900" TextColor="White" CornerRadius="10" Clicked="RegisterButton_Clicked"></Button>
+            <Button Grid.Row="3" Margin="30,0,30,0" Grid.Column="0" Text="Marcas" BackgroundColor="#ff9900" TextColor="White" CornerRadius="10" Clicked="RegisterButton_Clicked"></Button>
 
         </Grid>
 

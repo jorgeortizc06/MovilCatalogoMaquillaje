@@ -41,7 +41,7 @@ namespace App4._2
                         {
                             Detail = new NavigationPage((Xamarin.Forms.Page)Activator.CreateInstance(targetType))
                             {
-                                BarBackgroundColor = Color.Navy,
+                                BarBackgroundColor = Color.Purple,
                                 BarTextColor = Color.White
                             };
                         }
@@ -65,7 +65,7 @@ namespace App4._2
         {
             Detail = new NavigationPage((Xamarin.Forms.Page)Activator.CreateInstance(typeof(ProductoListPage)))
             {
-                BarBackgroundColor = Color.Navy,
+                BarBackgroundColor = Color.Purple,
                 BarTextColor = Color.White
             };
         }

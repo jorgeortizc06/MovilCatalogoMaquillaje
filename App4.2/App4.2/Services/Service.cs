@@ -140,13 +140,10 @@ namespace App4_2.Services
 
         public async Task<bool> ProductoDeleteAsync(Producto model)
         {
-            Uri uri = new Uri(url + "api/Producto/Delete");
+            Uri uri = new Uri(url + "api/Productos/"+model.Id);
 
-            string json = JsonConvert.SerializeObject(model);
 
-            StringContent httpContent = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
-
-            HttpResponseMessage response = await client.PostAsync(uri, httpContent);
+            var response = await client.DeleteAsync(uri);
 
             if (response.IsSuccessStatusCode)
             {

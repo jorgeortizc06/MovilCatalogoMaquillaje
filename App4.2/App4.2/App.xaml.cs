@@ -44,7 +44,7 @@ namespace App4._2
         {
             MainPage = new NavigationPage(new LoginPage())
             {
-                BarBackgroundColor = Color.Navy,
+                BarBackgroundColor = Color.Purple,
                 BarTextColor = Color.White
             };
         }
